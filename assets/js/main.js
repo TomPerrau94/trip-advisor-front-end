@@ -75,7 +75,7 @@ $.addEventListener("DOMContentLoaded", () => {
       "https://trip-advisor-back-end-tom.herokuapp.com/sign-up",
       data
     );
-    // console.log(response);
+    console.log("Votre compte ressemble à ça en bdd : " + response);
 
     if (response.request.status === 200) {
       form.style.display = "none";
