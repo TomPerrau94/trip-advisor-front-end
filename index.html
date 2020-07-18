@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/icons.css" />
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <title>TripAdvisor</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="desktop-header">
+          <div class="header-left">
+            <img src="/assets/img/logo.svg" alt="logo TripAdvisor" />
+            <!-- <input type="search" name="" id="" /> -->
+          </div>
+          <div class="header-right">
+            <button class="button-secondary">
+              <span><i class="icon-plus_c"></i></span>
+              <span>Publier</span>
+            </button>
+            </button>
+            <button class="button-secondary">
+              <span><i class="icon-notification_bell"></i></span>
+              <span>Alertes</span>
+            </button>
+            <button class="button-secondary">
+              <span><i class="icon-heart"></i></span>
+              <span>Voyages</span>
+            </button>
+            <button id="sign-up-button">S'inscrire</button>
+          </div>
+        </div>
+        <div class="mobile-header">
+          <button class="mobile-header-button">
+            <i class="icon-menu_bars"></i>
+          </button>
+          <img src="/assets/img/logo.svg" alt="">
+          <button class="mobile-header-button">
+            <i class="icon-search"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="explore">
+          <div class="main-title">
+            <h1><span class="color-red">Explorez</span> Paris</h1>
+          </div>
+          <nav>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Conseils de voyage</span>
+              <span class="nav-item-icon"><i class="icon-flag"></i></span>
+            </a>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Hôtels</span>
+              <span class="nav-item-icon"><i class="icon-hotels"></i></span>
+            </a>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Locations de vacances</span>
+              <span class="nav-item-icon"
+                ><i class="icon-vacation_rentals"></i
+              ></span>
+            </a>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Activités</span>
+              <span class="nav-item-icon"
+                ><i class="icon-attractions"></i
+              ></span>
+            </a>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Restaurants</span>
+              <span class="nav-item-icon"
+                ><i class="icon-restaurants"></i
+              ></span>
+            </a>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Forums de voyage</span>
+              <span class="nav-item-icon"><i class="icon-forums"></i></span>
+            </a>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Vols</span>
+              <span class="nav-item-icon"><i class="icon-flights"></i></span>
+            </a>
+            <a href="" class="nav-item">
+              <span class="nav-item-text">Plus</span>
+              <span class="nav-item-icon"
+                ><i class="icon-more_horizontal"></i
+              ></span>
+            </a>
+          </nav>
+          <div class="explore-images">
+            <div class="explore-images-left">
+              <img src="/assets/img/image-explore-1.jpg" alt="" />
+              <div class="all-photos">
+                <i class="icon-photo"></i><a href="">Toutes les photos</a>
+              </div>
+            </div>
+            <div class="explore-images-right">
+              <img src="/assets/img/image-explore-2.jpg" alt="" />
+              <img src="/assets/img/image-explore-3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="legend">
+            <div class="breadcrumb">
+              <a href="">Europe</a>
+              <a href="">France</a>
+              <a href="">Île-de-France</a>
+              <a href="">Paris</a>
+            </div>
+            <div class="legend-title">
+              <span>Visiter : Paris</span>
+            </div>
+          </div>
+          <div class="explore-infos">
+            <div class="explore-infos-description">
+              <h2>La ville Lumière éboulit en tous points</h2>
+              <p class="description-text">
+                Aucun autre endroit au monde ne fait autant rêver que Paris. La
+                ville séduit par son art, son architecture, sa culture et sa
+                cuisine, mais il y a aussi des merveilles plus discrètes qui
+                n’attendent qu’à être explorées : les ruelles pavées
+                pittoresques, les pâtisseries au coin de la rue et les petits
+                bistrots douillets qui vous invitent à boire un verre de
+                beaujolais. Préparez-vous à vous approprier Paris.
+              </p>
+            </div>
+            <div class="explore-infos-plan">
+              <div class="explore-infos-plan-text background-red">
+                <h3>Commencez à organiser Paris</h3>
+                <p>
+                  Créez un voyage pour enregistrer et organiser toutes vos idées
+                  et les visualiser sur une carte.
+                </p>
+                <button>Créez un voyage</button>
+              </div>
+              <div class="explore-infos-plan-image">
+                <img src="/assets/img/image-explore-infos-voyage.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="advice">
+          <div class="section-title">
+            <div class="title-line"></div>
+            <h2>Conseils de voyage</h2>
+            <div class="title-line"></div>
+          </div>
+          <a href="" class="display-all-advice">Tout afficher</a>
+          <ul class="advice-cards">
+            <li>
+              <img src="/assets/img/advice-image-1.svg" alt="" />
+              <a href="">Meilleure période pour visiter</a>
+            </li>
+            <li>
+              <img src="/assets/img/advice-image-2.svg" alt="" />
+              <a href="">Se déplacer</a>
+            </li>
+            <li>
+              <img src="/assets/img/advice-image-3.svg" alt="" />
+              <a href="">Coutumes locales</a>
+            </li>
+            <li>
+              <img src="/assets/img/advice-image-4.svg" alt="" />
+              <a href="">Conseils de pros</a>
+            </li>
+          </ul>
+        </section>
+        <section id="inevitables">
+          <div class="section-title">
+            <div class="title-line"></div>
+            <h2>Immanquable à Paris</h2>
+            <div class="title-line"></div>
+          </div>
+          <div class="inevitable have-fun">
+            <div class="inevitable-description">
+              <h3>Se divertir</h3>
+              <p class="description-text">
+                Des lieux à voir, des rues à explorer et des expériences
+                emblématiques à Paris.
+              </p>
+            </div>
+            <ul class="inevitable-links">
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                  <p>
+                    Tours et plateformes d'observation, Monuments & Points
+                    d'intérêt
+                  </p>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-2.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Musée du Louvre</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">100 600 avis</span>
+                  </div>
+                  <p>
+                    Bâtiments architecturaux, Musées d'art
+                  </p>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-3.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Arc de Triomphe</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">44 985 avis</span>
+                  </div>
+                  <p>
+                    Bâtiments architecturaux, Sites historiques
+                  </p>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-4.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Musée Rodin</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">12 420 avis</span>
+                  </div>
+                  <p>
+                    Musées spécialisés
+                  </p>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-5.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Cathédrale Notre-Dame de Paris</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">71 194 avis</span>
+                  </div>
+                  <p>
+                    Bâtiments architecturaux, Sites historiques
+                  </p>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-6.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Librairie Shakespeare and Company</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">3 920 avis</span>
+                  </div>
+                  <p>
+                    Bibliothèques, Grands magasins
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <button class="carousel-arrow-right">
+              <i class="icon-arrow_right"></i>
+            </button>
+          </div>
+          <div class="inevitable">
+            <div class="inevitable-description">
+              <h3>Se reposer</h3>
+              <p class="description-text">
+                Un mélange de charme, de symboles et de modernité.
+              </p>
+            </div>
+            <ul class="inevitable-links">
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Le Bristol Paris</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <span class="rating-number">2066 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button class="carousel-arrow-right">
+              <i class="icon-arrow_right"></i>
+            </button>
+          </div>
+          <div class="inevitable">
+            <div class="inevitable-description">
+              <h3>Se reposer</h3>
+              <p class="description-text">
+                Un mélange de charme, de symboles et de modernité.
+              </p>
+            </div>
+            <ul class="inevitable-links">
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Le Bristol Paris</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <span class="rating-number">2066 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button class="link-image-like">
+                  <i class="icon-heart"></i>
+                </button>
+                <div class="inevitable-links-image">
+                  <img src="/assets/img/have-fun-link-1.jpg" alt="" />
+                </div>
+                <div class="inevitable-link-description">
+                  <h4>Tour Eiffel</h4>
+                  <div class="rating">
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_full_refresh"></i>
+                    <i class="icon-bubble_rating_half_refresh"></i>
+                    <span class="rating-number">139 901 avis</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button class="carousel-arrow-right">
+              <i class="icon-arrow_right"></i>
+            </button>
+          </div>
+        </section>
+        <section id="guides">
+          <div class="section-title">
+            <div class="title-line"></div>
+            <h2>Guides de voyageurs</h2>
+            <div class="title-line"></div>
+          </div>
+          <div class="guides-links">
+            <div class="guide-col">
+              <img src="/assets/img/guide-img-1.jpg" alt="" />
+              <div class="guide-description">
+                <img src="/assets/img/guide-author-1.jpg" alt="" />
+                <p class="guide-description-author">Par <a href="">Topito</a></p>
+                <h4>Top 10 des choses à faire ou à voir dans le 14ème</h4>
+                <p class="description-text">
+                  Les Catacombes De Paris, Parc Montsouris, Le Tournesol cafe,
+                  Fondation Cartier pour l'art contemporain, Gare Montparnasse,
+                  Rue Daguerre, Statue de Coluche, Place Denfert-Rochereau,
+                  Cimetière du Montparnasse, Suivre l'Observatoire de Paris
+                </p>
+                <div class="guide-description-count">
+                  <i class="icon-heart_fill"></i>
+                  <p class="articles-count">36 articles</p>
+                </div class="guide-description-count">
+              </div>
+            </div>
+            <div class="guide-col">
+              <img src="/assets/img/guide-img-1.jpg" alt="" />
+              <div class="guide-description">
+                <img src="/assets/img/guide-author-1.jpg" alt="" />
+                <p class="guide-description-author">Par <a href="">Topito</a></p>
+                <h4>Top 10 des choses à faire ou à voir dans le 14ème</h4>
+                <p class="description-text">
+                  Les Catacombes De Paris, Parc Montsouris, Le Tournesol cafe,
+                  Fondation Cartier pour l'art contemporain, Gare Montparnasse,
+                  Rue Daguerre, Statue de Coluche, Place Denfert-Rochereau,
+                  Cimetière du Montparnasse, Suivre l'Observatoire de Paris
+                </p>
+                <div class="guide-description-count">
+                  <i class="icon-heart_fill"></i>
+                  <p class="articles-count">36 articles</p>
+                </div class="guide-description-count">
+              </div>
+            </div>
+            <div class="guide-col">
+              <img src="/assets/img/guide-img-1.jpg" alt="" />
+              <div class="guide-description">
+                <img src="/assets/img/guide-author-1.jpg" alt="" />
+                <p class="guide-description-author">Par <a href="">Topito</a></p>
+                <h4>Top 10 des choses à faire ou à voir dans le 14ème</h4>
+                <p class="description-text">
+                  Les Catacombes De Paris, Parc Montsouris, Le Tournesol cafe,
+                  Fondation Cartier pour l'art contemporain, Gare Montparnasse,
+                  Rue Daguerre, Statue de Coluche, Place Denfert-Rochereau,
+                  Cimetière du Montparnasse, Suivre l'Observatoire de Paris
+                </p>
+                <div class="guide-description-count">
+                  <i class="icon-heart_fill"></i>
+                  <p class="articles-count">36 articles</p>
+                </div class="guide-description-count">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="forums"></section>
+        <section id="rent"></section>
+        <section id="spots"></section>
+      </div>
+    </main>
+    <footer class="background-cream">
+      <div class="container container-flex-center">
+        <p>
+          Made @
+          <a href="https://www.lereacteur.io/" target="blank">Le Reacteur</a> by
+          <a href="https://github.com/tomPerrau94/" target="blank"
+            >Tom Perrau</a
+          >
+        </p>
+      </div>
+    </footer>
+    <div id="sign-up-modal">
+      <div class="sign-up-modal-content">
+        <button id="sign-up-modal-close" class="mobile-header-button"><i class="icon-times"></i></button>
+        <h2>Formulaire d'inscription</h2>
+        <div id="sign-up-success"><p>Votre compte est maintenant inscrit dans notre base de données. Faites un tour sur notre site web !</p>
+        <button id="return-to-website">Retour au site web</button>
+        </div>
+        <!-- <div id="sign-up-error"><p>Quelque chose s'est mal passé lors de la création de votre compte. Rechargez la page et réessayez !</p>
+          <button class="return-to-website">Recharger la page</button>
+          </div> -->
+        <form id="sign-up-form" method="post" action="">
+          <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          value=""
+          placeholder="Prénom" required
+        />
+        <input
+          type="text"
+          name="lastname"
+          id="lastname"
+          value=""
+          placeholder="Nom" required
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value=""
+          placeholder="Email" required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          value=""
+          placeholder="Mot de passe" required 
+        />
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="8"
+          placeholder="Décrivez-vous en quelques lignes..."
+        ></textarea>
+        <span class="sign-up-modal-consent"><input type="checkbox" required/>J'ai lu et j'accepte les <a href="">conditions d'utilisation</a>.</span>
+        <button type="submit">Inscrivez-vous</button>
+      </form>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

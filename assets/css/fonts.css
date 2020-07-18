@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Trip Sans";
+  src: url("/assets/fonts/TripSans-Regular.eot");
+  src: url("/assets/fonts/TripSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/TripSans-Regular.woff2") format("woff2"),
+    url("/assets/fonts/TripSans-Regular.woff") format("woff"),
+    url("/assets/fonts/TripSans-Regular.ttf") format("truetype"),
+    url("/assets/fonts/TripSans-Regular.svg#TripSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trip Sans";
+  src: url("/assets/fonts/TripSans-Medium.eot");
+  src: url("/assets/fonts/TripSans-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/TripSans-Medium.woff2") format("woff2"),
+    url("/assets/fonts/TripSans-Medium.woff") format("woff"),
+    url("/assets/fonts/TripSans-Medium.ttf") format("truetype"),
+    url("/assets/fonts/TripSans-Medium.svg#TripSans-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trip Sans Mono";
+  src: url("/assets/fonts/TripSansMono-Regular.eot");
+  src: url("/assets/fonts/TripSansMono-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/TripSansMono-Regular.woff2") format("woff2"),
+    url("/assets/fonts/TripSansMono-Regular.woff") format("woff"),
+    url("/assets/fonts/TripSansMono-Regular.ttf") format("truetype"),
+    url("/assets/fonts/TripSansMono-Regular.svg#TripSansMono-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
