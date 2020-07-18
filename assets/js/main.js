@@ -51,7 +51,10 @@ $.addEventListener("DOMContentLoaded", () => {
     };
 
     // console.log(data);
-    const response = await axios.post("http://localhost:3000/sign-up", data);
+    const response = await axios.post(
+      "https://trip-advisor-back-end-tom.herokuapp.com//sign-up",
+      data
+    );
     // console.log(response);
 
     if (response.request.status === 200) {
