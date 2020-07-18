@@ -75,15 +75,13 @@ $.addEventListener("DOMContentLoaded", () => {
       "https://trip-advisor-back-end-tom.herokuapp.com/sign-up",
       data
     );
-    console.log("Votre compte ressemble à ça en bdd : " + response);
 
     if (response.request.status === 200) {
       form.style.display = "none";
       signupSuccess.style.display = "flex";
     }
-    // else {
-    //   form.style.display = "none";
-    //   signupError.style.display = "flex";
-    // }
+
+    console.log("Votre compte a bien été ajouté :");
+    console.log(response);
   });
 });
