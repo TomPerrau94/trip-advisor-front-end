@@ -4,7 +4,7 @@
 
 ## Front-End
 
-Practiced responsiveness on most of the elements and sections of the page. Try them yourself, but don't go below 768px breakpoint !
+Practiced responsiveness on most of the elements and sections of the page. Try them yourself, but not everything is perfect below 768px breakpoint !
 
 ## Back-End
 
